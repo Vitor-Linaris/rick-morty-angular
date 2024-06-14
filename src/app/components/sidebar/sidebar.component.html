@@ -1,0 +1,38 @@
+<aside id="sidebar" [class.expand]="isOpen" [class.closed]="!isOpen">
+  <div class="d-flex">
+    <button (click)="toggle()" id="toggle-btn" type="button">
+      <i class="bi bi-columns-gap"></i>
+    </button>
+    <div class="sidebar-logo">
+      <a href="#">
+        <img src="/img/logo.png" alt="" />
+      </a>
+    </div>
+  </div>
+  <ul class="sidebar-nav">
+    <li class="sidebar-item">
+      <a href="#" class="sidebar-link">
+        <i class="bi bi-house"></i>
+        <span class="ms-3">Home</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a href="#" class="sidebar-link">
+        <i class="bi bi-person-badge"></i>
+        <span class="ms-3">Personagens</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a href="#" class="sidebar-link">
+        <i class="bi bi-camera-reels"></i>
+        <span class="ms-3">Episódios</span>
+      </a>
+    </li>
+  </ul>
+  <div class="sidebar-footer">
+    <a href="" class="sidebar-link">
+      <i class="bi bi-box-arrow-left"></i>
+      <span class="ms-3">Logout</span>
+    </a>
+  </div>
+</aside>

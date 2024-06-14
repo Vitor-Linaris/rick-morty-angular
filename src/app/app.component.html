@@ -1,55 +1,109 @@
 <div class="wrapper">
-  <aside id="sidebar" [class.expand]="isOpen" [class.closed]="!isOpen">
-    <div class="d-flex">
-      <button (click)="toggle()" id="toggle-btn" type="button">
-        <i class="bi bi-columns-gap"></i>
-      </button>
-      <div class="sidebar-logo">
-        <a href="#">
-          <img src="/img/logo.png" alt="" />
-        </a>
-      </div>
-    </div>
-    <ul class="sidebar-nav">
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="bi bi-house"></i>
-          <span class="ms-3">Home</span>
-        </a>
-      </li>
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="bi bi-person-badge"></i>
-          <span class="ms-3">Personagens</span>
-        </a>
-      </li>
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="bi bi-camera-reels"></i>
-          <span class="ms-3">Episódios</span>
-        </a>
-      </li>
-    </ul>
-    <div class="sidebar-footer">
-      <a href="" class="sidebar-link">
-        <i class="bi bi-box-arrow-left"></i>
-        <span class="ms-3">Logout</span>
-      </a>
-    </div>
-  </aside>
-
+  <app-sidebar></app-sidebar>
   <div class="main">
-    <header class="d-flex align-items-center justify-content-end py-3">
+    <header class="d-flex align-items-center justify-content-end px-3">
       <div class="search d-flex justify-content-center w-100">
         <i class="bi bi-search"></i>
-        <input class="w-75" type="text" placeholder="Buscar..." />
+        <input class="w-75 ms-3" type="text" placeholder="Buscar..." />
       </div>
       <div class="profile">
-        <div class="img-profile">
-          <i class="bi bi-person"></i>
-          <span>Username</span>
+        <div
+          class="img-profile d-flex align-items-center justify-content-center border-start border-info"
+        >
+          <div
+            class="icon d-flex align-items-center justify-content-center mr-3"
+          >
+            <i class="bi bi-person"></i>
+          </div>
+          <span class="ms-3">Username</span>
         </div>
       </div>
     </header>
+    <main>
+      <div class="content p-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="card" style="width: 27rem">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width: 27rem">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width: 27rem">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width: 100%">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width: 27rem">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width: 27rem">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 </div>
