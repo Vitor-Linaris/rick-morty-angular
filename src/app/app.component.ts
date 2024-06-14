@@ -9,5 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'rick-morty-angular';
+  isOpen = false;
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+  }
 }

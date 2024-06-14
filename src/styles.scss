@@ -24,6 +24,14 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
+i {
+  font-size: 2.4rem;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -41,6 +49,114 @@ p {
   font-family: "Red Hat Display", sans-serif;
   font-optical-sizing: auto;
 }
+
 body {
   background-color: $black-dark;
+}
+
+/* Sidebar */
+.wrapper {
+  display: flex;
+}
+
+#sidebar {
+  width: 7rem;
+  min-height: 7rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease-in-out;
+  background-color: $black-normal;
+  &.expand {
+    width: 21rem;
+    min-width: 21rem;
+  }
+  &:not(.expand) .sidebar-logo {
+    display: none;
+  }
+  &:not(.expand) .sidebar-link {
+    span {
+      display: none;
+    }
+  }
+  &:not(.expand) .sidebar-item {
+    span {
+      display: none;
+    }
+  }
+}
+
+#toggle-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 1.6rem 2.4rem;
+
+  i {
+    font-size: 2.4rem;
+    color: $white-normal;
+  }
+}
+
+.sidebar-logo {
+  margin: auto 0;
+  a {
+    img {
+      max-width: 12rem;
+    }
+  }
+}
+
+.sidebar-nav {
+  padding: 3.2rem 0;
+  flex: 1 1 auto;
+  .sidebar-item {
+    position: relative;
+  }
+}
+
+a.sidebar-link {
+  padding: 1rem 2.4rem;
+  color: $white-normal;
+  display: block;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+  i {
+    font-size: 1.8rem;
+  }
+  span {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+  }
+  &:hover {
+    background-color: $black-light;
+    border-left: 3px solid $blue-dark;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: $black-dark;
+}
+
+.search {
+  i {
+    color: $white-normal;
+    font-size: 18px;
+  }
+  input[type="text"] {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.6rem;
+    background-color: $black-dark;
+    border: 1px solid $black-dark;
+  }
+  &:focus {
+    border: 1px solid $blue-dark;
+  }
+  ::placeholder {
+    color: $gray-500;
+  }
 }
