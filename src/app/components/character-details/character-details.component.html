@@ -1,0 +1,32 @@
+<div class="container mt-4" *ngIf="character">
+  <h1 class="text-center mb-4">{{ character.name }}</h1>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <img
+          [src]="character.image"
+          class="card-img-top"
+          alt="{{ character.name }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ character.name }}</h5>
+          <p class="card-text">
+            <strong>Status:</strong> {{ character.status }}
+          </p>
+          <p class="card-text">
+            <strong>Species:</strong> {{ character.species }}
+          </p>
+          <p class="card-text">
+            <strong>Gender:</strong> {{ character.gender }}
+          </p>
+          <p class="card-text">
+            <strong>Origin:</strong> {{ character.origin.name }}
+          </p>
+          <a [routerLink]="['/character']" class="btn btn-primary"
+            >Back to List</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

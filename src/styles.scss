@@ -1,3 +1,5 @@
+/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -51,87 +53,13 @@ p {
 }
 
 body {
+  color: $white-normal;
   background-color: $black-dark;
 }
 
-/* Sidebar */
+/* App */
 .wrapper {
   display: flex;
-}
-
-#sidebar {
-  width: 7rem;
-  min-height: 7rem;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.25s ease-in-out;
-  background-color: $black-normal;
-  &.expand {
-    width: 21rem;
-    min-width: 21rem;
-  }
-  &:not(.expand) .sidebar-logo {
-    display: none;
-  }
-  &:not(.expand) .sidebar-link {
-    span {
-      display: none;
-    }
-  }
-  &:not(.expand) .sidebar-item {
-    span {
-      display: none;
-    }
-  }
-}
-
-#toggle-btn {
-  background-color: transparent;
-  cursor: pointer;
-  border: 0;
-  padding: 1.6rem 2.4rem;
-
-  i {
-    font-size: 2.4rem;
-    color: $white-normal;
-  }
-}
-
-.sidebar-logo {
-  margin: auto 0;
-  a {
-    img {
-      max-width: 12rem;
-    }
-  }
-}
-
-.sidebar-nav {
-  padding: 3.2rem 0;
-  flex: 1 1 auto;
-  .sidebar-item {
-    position: relative;
-  }
-}
-
-a.sidebar-link {
-  padding: 1rem 2.4rem;
-  color: $white-normal;
-  display: block;
-  white-space: nowrap;
-  border-left: 3px solid transparent;
-  i {
-    font-size: 1.8rem;
-  }
-  span {
-    font-family: "Red Hat Display", sans-serif;
-    font-size: 16px;
-  }
-  &:hover {
-    background-color: $black-light;
-    border-left: 3px solid $blue-dark;
-  }
 }
 
 .main {
@@ -140,54 +68,4 @@ a.sidebar-link {
   overflow: hidden;
   transition: all 0.3s ease;
   background-color: $black-dark;
-}
-
-header {
-  min-height: 68px;
-}
-
-.search {
-  i {
-    color: $white-normal;
-    font-size: 18px;
-  }
-  input[type="text"] {
-    font-family: "Red Hat Display", sans-serif;
-    font-size: 1.6rem;
-    background-color: $black-dark;
-    color: $white-normal;
-    border: 1px solid $black-dark;
-  }
-  &:focus {
-    border: 1px solid $blue-dark;
-  }
-  ::placeholder {
-    color: $gray-500;
-  }
-}
-
-.profile {
-  width: 100%;
-  max-width: 22rem;
-  height: 100%;
-  .img-profile {
-    .icon {
-      width: 48px;
-      height: 48px;
-      background-color: $black-light;
-      border-radius: 100px;
-      margin-left: 12px;
-      i {
-        color: $white-dark;
-      }
-    }
-    span {
-      color: $white-light;
-      font-family: "Barlow";
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 140%;
-    }
-  }
 }

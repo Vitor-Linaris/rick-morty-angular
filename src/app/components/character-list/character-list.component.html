@@ -1,0 +1,57 @@
+<div class="container-fluid mt-4">
+  <h1 class="text-center mb-4">Personagens</h1>
+  <div class="row mb-3">
+    <div class="col">
+      <input [(ngModel)]="nameFilter" class="form-control" placeholder="Name" />
+    </div>
+    <div class="col">
+      <input
+        [(ngModel)]="statusFilter"
+        class="form-control"
+        placeholder="Status"
+      />
+    </div>
+    <div class="col">
+      <input
+        [(ngModel)]="speciesFilter"
+        class="form-control"
+        placeholder="Species"
+      />
+    </div>
+    <div class="col">
+      <button (click)="applyFilters()" class="btn btn-primary w-100">
+        Apply Filters
+      </button>
+    </div>
+  </div>
+  <div *ngIf="characters.length > 0; else noCharacters">
+    <div class="row">
+      <div *ngFor="let character of characters" class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img
+            [src]="character.image"
+            class="card-img-top"
+            alt="{{ character.name }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ character.name }}</h5>
+            <p class="card-text">
+              <strong>Status:</strong> {{ character.status }}
+            </p>
+            <p class="card-text">
+              <strong>Species:</strong> {{ character.species }}
+            </p>
+            <a [routerLink]="['/character', character.id]" class="btn btn-info"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noCharacters>
+    <div class="col">
+      <p class="text-center">No characters found.</p>
+    </div>
+  </ng-template>
+</div>
