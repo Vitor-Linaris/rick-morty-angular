@@ -1,27 +1,57 @@
-# RickMortyAngular
+# Rick and Morty Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+Este projeto é uma aplicação Angular que consome a API de Rick and Morty para exibir uma lista de personagens e detalhes de cada personagem. A aplicação permite realizar filtros múltiplos e possui scroll infinito para carregar mais personagens conforme o usuário rola a página.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js (versão 12 ou superior)
+- Angular CLI (versão 18 ou superior)
 
-## Code scaffolding
+## Instalação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone o repositório:
 
-## Build
+   ```sh
+   git clone https://github.com/Vitor-Linaris/rick-morty-angular.git
+   cd rick-and-morty-angular-app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ```
 
-## Running unit tests
+2. Instale as dependências:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```sh
+   npm install
 
-## Running end-to-end tests
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Executando a Aplicação
 
-## Further help
+- Para executar a aplicação localmente, use o seguinte comando:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+  ```sh
+  ng serve
+
+  ```
+
+- A aplicação estará disponível em http://localhost:4200.
+
+## Estrutura do Projeto
+
+src/app/
+
+- character-list/ - Componente para listar personagens com filtros e scroll infinito.
+- character-detail/ - Componente para exibir os detalhes de um personagem.
+- episode-list/ - Componente para listar episódios com filtros.
+- episode-detail/ - Componente para exibir os detalhes de um episódio
+- home/ - Componente para a página inicial com estatísticas gerais.
+- rick-and-morty.service.ts - Serviço para consumir a API de Rick and Morty.
+
+## Funcionalidades
+
+Lista de Personagens
+O componente CharacterListComponent exibe uma lista de personagens com a capacidade de aplicar múltiplos filtros e possui scroll infinito para carregar mais personagens.
+
+- Filtros disponíveis:
+- Nome
+- Status
+- Espécie
