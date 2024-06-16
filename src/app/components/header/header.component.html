@@ -1,16 +1,32 @@
-<header class="d-flex align-items-center justify-content-end px-5">
-  <div class="search d-flex justify-content-start w-100">
-    <i class="bi bi-search"></i>
-    <input class="w-75 ms-3" type="text" placeholder="Buscar..." />
-  </div>
-  <div class="profile">
-    <div
-      class="img-profile d-flex align-items-center justify-content-center border-start border-info"
-    >
-      <div class="icon d-flex align-items-center justify-content-center mr-3">
-        <i class="bi bi-person"></i>
-      </div>
-      <span class="ms-3">Username</span>
+<header>
+  <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-4 shadow">
+    <a href="#">
+      <img src="/img/logo.png" alt="" />
+    </a>
+    <div class="search d-flex justify-content-center w-75">
+      <input
+        [(ngModel)]="searchQuery"
+        (keyup.enter)="onSearch()"
+        class="form-control w-50"
+        type="text"
+        placeholder="Buscar..."
+        aria-label="Search"
+      />
+      <button
+        class="btn btn-info ms-2 fs-4"
+        (click)="onSearch()"
+        (keyup.enter)="onSearch()"
+      >
+        Pesquisar
+      </button>
     </div>
-  </div>
+    <ul class="navbar-nav px-3">
+      <li
+        class="nav-item d-flex align-items-center justify-content-center text-nowrap"
+      >
+        <i class="bi bi-person"></i>
+        <a class="nav-link fs-3 ms-3" href="#">Username</a>
+      </li>
+    </ul>
+  </nav>
 </header>

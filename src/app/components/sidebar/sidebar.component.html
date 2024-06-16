@@ -1,8 +1,5 @@
-<aside id="sidebar" [class.expand]="isOpen" [class.closed]="!isOpen">
-  <div class="d-flex">
-    <button (click)="toggle()" id="toggle-btn" type="button">
-      <i class="bi bi-columns-gap"></i>
-    </button>
+<!-- <aside id="sidebar" class="expand">
+  <div class="d-flex align-items-center justify-content-center pt-4">
     <div class="sidebar-logo">
       <a href="#">
         <img src="/img/logo.png" alt="" />
@@ -36,3 +33,45 @@
     </a>
   </div>
 </aside>
+ -->
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-dar sidebar">
+      <div class="sticky-top">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a [routerLink]="['/']" class="nav-link">
+              <i class="bi bi-house"></i>
+              <span class="ms-3 fs-3">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/character']" class="nav-link">
+              <i class="bi bi-person-badge"></i>
+              <span class="ms-3 fs-3">Personagens</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/episode']" class="nav-link">
+              <i class="bi bi-camera-reels"></i>
+              <span class="ms-3 fs-3">Episódios</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-footer p-2">
+          <a href="" class="sidebar-link">
+            <i class="bi bi-box-arrow-left"></i>
+            <span class="ms-3 fs-3">Logout</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="row mb-3">
+        <ng-content></ng-content>
+      </div>
+    </main>
+  </div>
+</div>

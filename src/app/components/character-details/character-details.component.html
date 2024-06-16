@@ -9,21 +9,21 @@
           alt="{{ character.name }}"
         />
         <div class="card-body">
-          <h5 class="card-title">{{ character.name }}</h5>
-          <p class="card-text">
+          <h5 class="card-title fs-2">{{ character.name }}</h5>
+          <p class="card-text fs-4">
             <strong>Status:</strong> {{ character.status }}
           </p>
-          <p class="card-text">
+          <p class="card-text fs-4">
             <strong>Species:</strong> {{ character.species }}
           </p>
-          <p class="card-text">
+          <p class="card-text fs-4">
             <strong>Gender:</strong> {{ character.gender }}
           </p>
-          <p class="card-text">
+          <p class="card-text fs-4">
             <strong>Origin:</strong> {{ character.origin.name }}
           </p>
-          <a [routerLink]="['/character']" class="btn btn-primary"
-            >Back to List</a
+          <a [routerLink]="['/character']" class="btn btn-info fs-4"
+            >Voltar para lista de personagens</a
           >
         </div>
       </div>

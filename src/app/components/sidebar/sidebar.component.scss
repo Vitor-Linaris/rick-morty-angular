@@ -1,77 +1,26 @@
 @import "../../../styles/variables.scss";
 
-#sidebar {
-  width: 7rem;
-  height: 100vh;
-  min-height: 7rem;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.25s ease-in-out;
+nav,
+sidebar {
   background-color: $black-normal;
-  &.expand {
-    width: 21rem;
-    min-width: 21rem;
-  }
-  &:not(.expand) .sidebar-logo {
-    display: none;
-  }
-  &:not(.expand) .sidebar-link {
-    span {
-      display: none;
-    }
-  }
-  &:not(.expand) .sidebar-item {
-    span {
-      display: none;
-    }
-  }
 }
 
-#toggle-btn {
-  background-color: transparent;
-  cursor: pointer;
-  border: 0;
-  padding: 1.6rem 2.4rem;
-
-  i {
-    font-size: 2.4rem;
-    color: $white-normal;
-  }
+.sticky-top {
+  top: 6.8rem;
 }
 
-.sidebar-logo {
-  margin: auto 0;
-  a {
-    img {
-      max-width: 12rem;
-    }
-  }
-}
-
-.sidebar-nav {
-  padding: 3.2rem 0;
-  flex: 1 1 auto;
-  .sidebar-item {
-    position: relative;
-  }
-}
-
-a.sidebar-link {
-  padding: 1rem 2.4rem;
-  color: $white-normal;
-  display: block;
-  white-space: nowrap;
-  border-left: 3px solid transparent;
-  i {
-    font-size: 1.8rem;
-  }
-  span {
-    font-family: "Red Hat Display", sans-serif;
-    font-size: 16px;
-  }
+.nav-item {
   &:hover {
-    background-color: $black-light;
-    border-left: 3px solid $blue-dark;
+    background-color: $blue-dark;
+    color: $black-dark;
+  }
+}
+
+.sidebar-footer {
+  &:hover {
+    background-color: $blue-dark;
+    a {
+      color: $black-dark;
+    }
   }
 }
